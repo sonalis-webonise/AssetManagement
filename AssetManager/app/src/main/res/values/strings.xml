@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">AssetManager</string>
+
+    <string name="hint_email">Email Id</string>
+    <string name="hint_password">Password</string>
+    <string name="title_activity_asset_manager">AssetManager</string>
+
+    <string name="action_search">Search</string>
+    <string name="action_filter">Filter</string>
+    <string name="action_sync">Sync</string>
+    <string name="action_export">Export</string>
+    <string name="action_change_password">Change Password</string>
+
+    <string name="button_Monitor">Monitor</string>
+    <string name="button_Keyboard">Keyboard</string>
+    <string name="button_Mouse">Mouse</string>
+    <string name="button_ThinkPad">ThinkPad</string>
+    <string name="button_Mac">Mac</string>
+    <string name="button_CPU">CPU</string>
+    <string name="button_Cable">Cable</string>
+
+</resources>
