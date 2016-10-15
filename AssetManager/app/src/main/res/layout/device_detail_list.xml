@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    card_view:cardCornerRadius="4dp"
+    card_view:contentPadding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/dividerHeight"
+            tool:text="Hello" />
+
+        <TextView
+            android:id="@+id/txtBrand"
+            style="@style/codeFontBrand"
+            android:layout_toLeftOf="@id/txtTag"
+            tool:text="Hello" />
+
+        <TextView
+            android:id="@+id/txtAssignedTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtBrand"
+            android:paddingTop="@dimen/dividerHeight"
+            tool:text="Hello" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtAssignedTo"
+            android:paddingBottom="@dimen/dividerHeight"
+            android:paddingTop="@dimen/dividerHeight"
+            tool:text="Hello" />
+
+        <Button
+            android:id="@+id/btnAssign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/txtBrand"
+            android:background="#ffffff"
+            android:textColor="@color/colorButton"
+            tool:text="Hello" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
+

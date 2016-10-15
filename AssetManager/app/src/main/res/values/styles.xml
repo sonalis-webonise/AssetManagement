@@ -14,20 +14,45 @@
         <item name="android:textColor">@color/colorText</item>
     </style>
 
+    <style name="codeFontBrand">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="codeFont">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="codeFontAssign">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/hovercenterColor</item>
+    </style>
+
     <style name="buttonFont">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@color/colorButton</item>
         <item name="android:textColor">@color/colorButtonText</item>
         <item name="android:layout_margin">@dimen/btnMargin</item>
         <item name="android:layout_marginLeft">@dimen/btnleftMargin</item>
+        <item name="android:background">@drawable/button_selector</item>
     </style>
 
     <style name="imageButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_margin">@dimen/btnMargin</item>
-        <item name="android:layout_marginRight">@dimen/imgRightMargin</item>
+    </style>
+
+    <style name="spinnerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/spinnerBottomMargin</item>
+        <item name="android:layout_marginTop">@dimen/spinnerBottomMargin</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

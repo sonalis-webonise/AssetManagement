@@ -2,13 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.webonise.assetmanager">
 
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.LoginActivity" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:label="@string/login_page" />
         <activity
             android:name=".Activity.SplashScreen"
             android:screenOrientation="portrait"
@@ -21,37 +25,44 @@
         </activity>
         <activity
             android:name=".Activity.AssetManagerActivity"
-            android:label="@string/title_activity_asset_manager"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activity.AssetTypeSelectorActivity"
+            android:label="@string/device_type"
             android:parentActivityName=".Activity.AssetManagerActivity">
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-
-        <activity
-            android:name=".Activity.MonitorActivity"
-            android:parentActivityName=".Activity.AssetTypeSelectorActivity"></activity>
-        <activity
-            android:name=".Activity.KeyboardActivity"
-            android:parentActivityName=".Activity.AssetTypeSelectorActivity" />
         <activity
             android:name=".Activity.MouseActivity"
+            android:label="@string/device_entry_form"
             android:parentActivityName=".Activity.AssetTypeSelectorActivity" />
         <activity
-            android:name=".Activity.ThinkpadActivity"
+            android:name=".Activity.DesktopSpecificActivity"
+            android:label="@string/device_entry_form"
             android:parentActivityName=".Activity.AssetTypeSelectorActivity" />
         <activity
-            android:name=".Activity.MacActivity"
+            android:name=".Activity.ConnectorCommonActivity"
+            android:label="@string/device_entry_form"
             android:parentActivityName=".Activity.AssetTypeSelectorActivity" />
         <activity
-            android:name=".Activity.CPUActivity"
+            android:name=".Activity.DongleActivity"
+            android:label="@string/device_entry_form"
             android:parentActivityName=".Activity.AssetTypeSelectorActivity" />
         <activity
-            android:name=".Activity.CableActivity"
-            android:parentActivityName=".Activity.AssetTypeSelectorActivity"></activity>
+            android:name=".Activity.AssignActivity"
+            android:label="@string/assign_page" />
+        <activity android:name=".Activity.DeviceSpecificationActivity" />
+        <activity
+            android:name=".Activity.FilterActivity"
+            android:label="@string/filter_page"
+            android:parentActivityName=".Activity.AssetManagerActivity"/>
+        <activity
+            android:name=".Activity.ChangePasswordActivity"
+            android:label="@string/change_password"
+            android:parentActivityName=".Activity.AssetManagerActivity"></activity>
     </application>
 
 </manifest>

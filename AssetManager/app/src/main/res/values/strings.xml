@@ -1,22 +1,124 @@
 <resources>
-    <string name="app_name">AssetManager</string>
+    <string name="app_name">Asset Manager</string>
 
+    <string name="login_page">Login</string>
+    <string name="device_type">Device Type</string>
+    <string name="device_entry_form">Device Form</string>
+    <string name="assign_page">Assignment Form</string>
+    <string name="change_password">Change Password</string>
+    <string name="filter_page">Filter</string>
+
+    <!--Login Validation-->
     <string name="hint_email">Email Id</string>
     <string name="hint_password">Password</string>
     <string name="title_activity_asset_manager">AssetManager</string>
+    <string name="error_emailLogin">Enter Email ID</string>
+    <string name="error_passwordLogin">Enter Password</string>
+    <string name="invalid_emailLogin">Enter Valid Email ID</string>
+    <string name="invalid_passwordLogin">Enter Valid Password with at least 8 characters</string>
 
+    <!--Menu items in action bar-->
     <string name="action_search">Search</string>
     <string name="action_filter">Filter</string>
     <string name="action_sync">Sync</string>
     <string name="action_export">Export</string>
     <string name="action_change_password">Change Password</string>
+    <string name="action_logout">Logout</string>
 
-    <string name="button_Monitor">Monitor</string>
-    <string name="button_Keyboard">Keyboard</string>
-    <string name="button_Mouse">Mouse</string>
-    <string name="button_ThinkPad">ThinkPad</string>
-    <string name="button_Mac">Mac</string>
-    <string name="button_CPU">CPU</string>
-    <string name="button_Cable">Cable</string>
+    <string name="filter">Done</string>
 
+    <string name="toastMessageLogin">Enter data in fields</string>
+
+    <!--Buttons on Device Forms-->
+    <string name="btn_saveDevice">Save Device</string>
+    <string name="btn_assign">Assign</string>
+
+    <!--Common fields in forms-->
+    <string name="hint_tag">Tag *</string>
+    <string name="hint_brand">Brand/Model *</string>
+    <string name="hint_serialNo">Serial Number *</string>
+    <string name="hint_owner">Owner *</string>
+
+    <!--Keyboard/Mouse specific field-->
+    <string name="type">Type</string>
+
+    <!--Dongle Specific fields-->
+    <string name="hint_simBrand">Sim Brand</string>
+    <string name="hint_simNumber">Sim Number</string>
+
+    <!--Assign page fields-->
+    <string name="hint_company">Company Name *</string>
+    <string name="hint_userType">User Type *</string>
+    <string name="hint_assignmentType">Assignment Type *</string>
+    <string name="hint_dateOfAssignment">Date *</string>
+    <string name="hint_note">Note</string>
+
+    <!--Desktop/Mobile/Mac specific fields-->
+    <string name="hint_processor">Processor</string>
+    <string name="hint_ramSize">RAM Size(Total in GB)</string>
+    <string name="hint_ramQuantitySize">Size</string>
+    <string name="hint_ramQuantityCount">Count</string>
+    <string name="hint_hdd">Hard Disk Drive(In GB)</string>
+    <string name="hint_macWifi">Mac Wifi</string>
+    <string name="hint_macLan">Mac LAN</string>
+    <string name="hint_os">Operating System</string>
+    <string name="hint_osVersion">Version of OS</string>
+    <string name="hint_osKey">Activation Key</string>
+
+    <!--Change password page-->
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm New Password</string>
+    <string name="button_change">Save New Password</string>
+
+    <string-array name="type_array">
+        <item>Wired</item>
+        <item>Wireless</item>
+    </string-array>
+
+    <string-array name="os_array">
+        <item>Windows</item>
+        <item>Linux</item>
+        <item>Android</item>
+        <item>iOS</item>
+    </string-array>
+
+    <string-array name="userType">
+        <item>Dev</item>
+        <item>BA/PM</item>
+        <item>HR/Admin</item>
+    </string-array>
+
+    <string-array name="assignType">
+        <item>Permanent</item>
+        <item>Temporary</item>
+        <item>Personal</item>
+    </string-array>
+
+    <string-array name="filterCategory">
+        <item>Device Type</item>
+        <item>Brand/Model</item>
+        <item>Status</item>
+    </string-array>
+
+    <string-array name="filterDevice">
+        <item>Desktop</item>
+        <item>Monitor</item>
+        <item>iMac</item>
+        <item>MacBook</item>
+        <item>MacMini</item>
+        <item>Laptop</item>
+    </string-array>
+
+    <string-array name="filterBrand">
+        <item>Dell</item>
+        <item>Apple</item>
+        <item>HP</item>
+        <item>Microsoft</item>
+        <item>Lenovo</item>
+    </string-array>
+
+    <string-array name="filterStatus">
+        <item>Assigned</item>
+        <item>Unassigned</item>
+    </string-array>
 </resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Activity.FilterActivity">
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        style="@style/codeFontBrand"
+        android:onClick="onCheckboxClick"
+        android:background="@color/bgstartColor" />
+
+</RelativeLayout>

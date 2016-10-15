@@ -5,7 +5,7 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
-        android:id="@+id/activity_mouse"
+        android:id="@+id/activity_dongle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -13,7 +13,7 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context="com.example.webonise.assetmanager.Activity.MouseActivity">
+        tools:context="com.example.webonise.assetmanager.Activity.DongleActivity">
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/input_layout_tag"
@@ -59,20 +59,34 @@
                 android:hint="@string/hint_owner" />
         </android.support.design.widget.TextInputLayout>
 
-        <TextView
-            android:id="@+id/txtType"
-            style="@style/codeFont"
-            android:text="@string/type" />
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_simBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <Spinner
-            android:id="@+id/spinnerType"
-            style="@style/spinnerStyle"
-            android:entries="@array/type_array"></Spinner>
+            <EditText
+                android:id="@+id/editsimbrand"
+                style="@style/inputFont"
+                android:hint="@string/hint_simBrand" />
+        </android.support.design.widget.TextInputLayout>
 
-            <Button
-                android:id="@+id/btnSaveDevice"
-                style="@style/buttonFont"
-                android:layout_weight="1"
-                android:text="@string/btn_saveDevice" />
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_simNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editsimno"
+                style="@style/inputFont"
+                android:hint="@string/hint_simNumber"
+                android:inputType="phone" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSaveDevice"
+            style="@style/buttonFont"
+            android:layout_weight="1"
+            android:text="@string/btn_saveDevice" />
+
     </LinearLayout>
 </ScrollView>

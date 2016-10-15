@@ -6,12 +6,12 @@ import android.os.Bundle;
 
 import com.example.webonise.assetmanager.R;
 
-public class ThinkpadActivity extends AppCompatActivity {
+public class DongleActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_thinkpad);
+        setContentView(R.layout.activity_dongle);
         ActionBar actionBar=getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
     }

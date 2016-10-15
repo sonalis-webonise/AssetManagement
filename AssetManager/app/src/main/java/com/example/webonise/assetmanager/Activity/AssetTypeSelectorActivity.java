@@ -4,14 +4,42 @@ import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.AdapterView;
+import android.widget.ListView;
 
+import com.example.webonise.assetmanager.Adapter.DeviceListBaseAdapter;
+import com.example.webonise.assetmanager.Model.DeviceTypeListData;
 import com.example.webonise.assetmanager.R;
 
-public class AssetTypeSelectorActivity extends AppCompatActivity implements View.OnClickListener {
+import java.util.ArrayList;
+import java.util.List;
 
-    private Button btnMonitor, btnKeyboard, btnMouse, btnThinkpad, btnMac, btnCpu, btnCable;
+public class AssetTypeSelectorActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+
+    List<Class> screenList = new ArrayList<>();
+
+    {
+        screenList.add(DesktopSpecificActivity.class);
+        screenList.add(DesktopSpecificActivity.class);//For Laptop
+        screenList.add(DesktopSpecificActivity.class);//For MacBook
+        screenList.add(DesktopSpecificActivity.class);//For IMac
+        screenList.add(DesktopSpecificActivity.class);//For MacMini
+        screenList.add(DongleActivity.class);
+        screenList.add(ConnectorCommonActivity.class);
+        screenList.add(MouseActivity.class);
+        screenList.add(ConnectorCommonActivity.class);//For Headphone
+        screenList.add(MouseActivity.class);//For Keyboard
+        screenList.add(ConnectorCommonActivity.class);//For Monitor
+        screenList.add(ConnectorCommonActivity.class);//For Router
+        screenList.add(DesktopSpecificActivity.class);//For Mobile
+    }
+
+    private ListView deviceDetail;
+    private Integer[] image;
+    private String[] device;
+    private ArrayList deviceDataList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +48,46 @@ public class AssetTypeSelectorActivity extends AppCompatActivity implements View
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+
         initButtonViews();
     }
 
+    private void initButtonViews() {
+
+        deviceDataList = new ArrayList();
+        deviceDetail = (ListView) findViewById(R.id.deviceList);
+        device = getResources().getStringArray(R.array.deviceType);
+        image = new Integer[]{R.drawable.desktop, R.drawable.laptop, R.drawable.macbook, R.drawable.imac, R.drawable.mac_mini, R.drawable.dongle, R.drawable.hdmi, R.drawable.mouse, R.drawable.headphone, R.drawable.keyboard, R.drawable.monitor, R.drawable.router, R.drawable.mobile};
+        getDataInList();
+        deviceDetail.setAdapter(new DeviceListBaseAdapter(AssetTypeSelectorActivity.this, deviceDataList));
+    }
+
+    private void getDataInList() {
+        for (int i = 0; i < device.length; i++) {
+            DeviceTypeListData data = new DeviceTypeListData();
+            data.setDeviceName(device[i]);
+            data.setImageName(image[i]);
+            deviceDataList.add(data);
+        }
+
+        deviceDetail.setOnItemClickListener(this);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        gotoScreen(position);
+    }
+
+    private void gotoScreen(int position) {
+        Intent intent = new Intent(this, screenList.get(position));
+        startActivity(intent);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return super.onOptionsItemSelected(item);
+    }
+    /*
     private void initButtonViews() {
         btnMonitor = (Button) findViewById(R.id.btnMonitor);
         btnKeyboard = (Button) findViewById(R.id.btnKeyboard);
@@ -46,11 +111,11 @@ public class AssetTypeSelectorActivity extends AppCompatActivity implements View
 
         switch (v.getId()) {
             case R.id.btnMonitor:
-                Intent intentMonitor = new Intent(this, MonitorActivity.class);
+                Intent intentMonitor = new Intent(this, IMacActivity.class);
                 startActivity(intentMonitor);
                 return;
             case R.id.btnKeyboard:
-                Intent intentKeyboard = new Intent(this, KeyboardActivity.class);
+                Intent intentKeyboard = new Intent(this, MacMiniActivity.class);
                 startActivity(intentKeyboard);
                 return;
             case R.id.btnMouse:
@@ -58,23 +123,24 @@ public class AssetTypeSelectorActivity extends AppCompatActivity implements View
                 startActivity(intentMouse);
                 return;
             case R.id.btnThinkpad:
-                Intent intentThinkpad = new Intent(this, ThinkpadActivity.class);
+                Intent intentThinkpad = new Intent(this, LaptopActivity.class);
                 startActivity(intentThinkpad);
                 return;
             case R.id.btnMac:
-                Intent intentMac = new Intent(this, MacActivity.class);
+                Intent intentMac = new Intent(this, MacBookActivity.class);
                 startActivity(intentMac);
                 return;
             case R.id.btnCpu:
-                Intent intentCpu = new Intent(this, CPUActivity.class);
+                Intent intentCpu = new Intent(this, DesktopSpecificActivity.class);
                 startActivity(intentCpu);
                 return;
             case R.id.btnCable:
-                Intent intentCable = new Intent(this, CableActivity.class);
+                Intent intentCable = new Intent(this, ConnectorCommonActivity.class);
                 startActivity(intentCable);
                 return;
             default:
                 return;
         }
     }
+*/
 }

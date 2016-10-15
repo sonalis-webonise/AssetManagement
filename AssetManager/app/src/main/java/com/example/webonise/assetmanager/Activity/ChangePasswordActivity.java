@@ -6,12 +6,13 @@ import android.os.Bundle;
 
 import com.example.webonise.assetmanager.R;
 
-public class CableActivity extends AppCompatActivity {
+public class ChangePasswordActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cable);
+        setContentView(R.layout.activity_change_password);
+
         ActionBar actionBar=getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
     }

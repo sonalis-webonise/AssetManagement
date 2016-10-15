@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="deviceType">
+        <item>Desktop</item>
+        <item>Laptop</item>
+        <item>MacBook</item>
+        <item>iMac</item>
+        <item>Mac-Mini</item>
+        <item>Dongle</item>
+        <item>HDMI - VGA Connector</item>
+        <item>Mouse</item>
+        <item>Headphone</item>
+        <item>Keyboard</item>
+        <item>Monitor</item>
+        <item>Router</item>
+        <item>Mobile/Tablet</item>
+    </string-array>
+
+    <string-array name="osType">
+        <item>Windows</item>
+        <item>Android</item>
+        <item>Linux</item>
+        <item>iOS</item>
+    </string-array>
+</resources>
