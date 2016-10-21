@@ -8,7 +8,7 @@
     <color name="colorButton">#84c225</color>
     <color name="colorButtonText">#000000</color>
 
-    <color name="colorBodyBack">#000000</color>
+    <color name="colorBodyBack">#ffffff</color>
 
     <color name="bgstartColor">#f1f1f2</color>
     <color name="bgcenterColor">#e7e7e8</color>

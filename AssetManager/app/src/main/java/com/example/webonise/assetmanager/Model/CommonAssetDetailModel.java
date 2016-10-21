@@ -1,13 +1,9 @@
 package com.example.webonise.assetmanager.Model;
 
-/**
- * Created by webonise on 13/10/16.
- */
-
-public class CommonAssetDetails {
+public class CommonAssetDetailModel {
     private String tag,brand,serialNumber,owner;
 
-    public CommonAssetDetails() {
+    public CommonAssetDetailModel() {
     }
 
     public String getTag() {

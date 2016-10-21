@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,9 +14,13 @@ import android.widget.Toast;
 
 import com.example.webonise.assetmanager.Activity.AssignActivity;
 import com.example.webonise.assetmanager.Activity.DeviceSpecificationActivity;
+import com.example.webonise.assetmanager.Model.AssignmentDetail;
 import com.example.webonise.assetmanager.Model.DeviceDetail;
 import com.example.webonise.assetmanager.R;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -25,11 +30,17 @@ import java.util.List;
 public class DeviceDetailAdapter extends RecyclerView.Adapter<DeviceDetailAdapter.MyViewHolder> {
 
     Context context;
-    private List<DeviceDetail> deviceDetailList;
+    public static final String assigned = "assigned";
+    public static final String unAssigned = "unassigned";
+    public static final String toastAssigned = "Already Assigned";
+    private List<DeviceDetail> deviceDetailList, searchList;
+    private AssignmentDetail assignmentDetail;
 
     public DeviceDetailAdapter(List<DeviceDetail> deviceDetailList, Context context) {
         this.deviceDetailList = deviceDetailList;
         this.context = context;
+        this.searchList = new ArrayList<>();
+        this.searchList.addAll(this.deviceDetailList);
     }
 
     @Override
@@ -41,16 +52,38 @@ public class DeviceDetailAdapter extends RecyclerView.Adapter<DeviceDetailAdapte
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         DeviceDetail deviceDetail = deviceDetailList.get(position);
+        AssignmentDetail assignmentDetail = deviceDetail.getAssignmentDetails();
         holder.txtBrand.setText(deviceDetail.getBrand());
         holder.txtTag.setText(deviceDetail.getTag());
-        holder.txtAssignedTo.setText(deviceDetail.getEmailId());
-        holder.txtDate.setText(deviceDetail.getDate());
-        holder.btnAssign.setText(deviceDetail.getStatus());
+        if (deviceDetail.getStatus() == 1) {
+            holder.btnAssign.setText(assigned);
+        } else {
+            holder.btnAssign.setText(unAssigned);
+        }
+        if (assignmentDetail != null) {
+            holder.txtAssignedTo.setText(assignmentDetail.getEmailId());
+            Date assignDate = new Date(assignmentDetail.getDateOfAssignment());
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+            holder.txtDate.setText(dateFormat.format(assignDate));
+        }
     }
 
     @Override
     public int getItemCount() {
         return deviceDetailList.size();
+    }
+
+    public void searchData(String newText) {
+        searchList.clear();
+        if (TextUtils.isEmpty(newText)) {
+            searchList.addAll(deviceDetailList);
+        } else {
+            for (DeviceDetail deviceDetail : deviceDetailList) {
+                if (deviceDetail.getTag().toLowerCase().contains(newText.toLowerCase()) || deviceDetail.getBrand().toLowerCase().contains(newText.toLowerCase())) {
+                    searchList.add(deviceDetail);
+                }
+            }
+        }
     }
 
 
@@ -77,8 +110,8 @@ public class DeviceDetailAdapter extends RecyclerView.Adapter<DeviceDetailAdapte
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.btnAssign:
-                    if (btnAssign.getText().equals("ASSIGNED")) {
-                        Toast.makeText(context.getApplicationContext(), "Already Assigned", Toast.LENGTH_LONG).show();
+                    if (btnAssign.getText().equals(1)) {
+                        Toast.makeText(context.getApplicationContext(), toastAssigned, Toast.LENGTH_LONG).show();
                     } else {
                         Intent intent = new Intent(context, AssignActivity.class);
                         context.startActivity(intent);

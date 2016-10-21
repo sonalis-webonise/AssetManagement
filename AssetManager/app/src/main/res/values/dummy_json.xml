@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dummy_json">{
+  \"data\": [
+    {
+\"assetId\":20,
+      \"deviceType\": 1,
+      \"deviceName\": \"MacBook\",
+      \"tag\": \"WL001\",
+      \"brand\": \"MacBook Pro\",
+      \"serialNumber\": \"JIG46958VJHV74HJJ38\",
+      \"owner\": 1,
+      \"ownerName\": \"Webonise\",
+      \"status\": 1,
+      \"notes\": \"General multiline notes\",
+      \"additionalInfo\": {
+        \"processor\": \"I3 2330m 2.20GHz\",
+        \"ram\": [
+          {
+            \"capacity\": 8,
+            \"quantity\": 1
+          },
+          {
+            \"capacity\": 4,
+            \"quantity\": 1
+          }
+        ],
+        \"hdd\": 500,
+        \"macWiFi\": \"AC:62:19:4D:3A:12\",
+        \"macLan\": \"FC:21:29:D4:A3:35\",
+        \"OSType\": 1,
+        \"OSName\": \"Mac OS\",
+        \"OSVersion\": \"Sierra\"
+      },
+      \"assignmentDetails\": {
+        \"emailId\": \"sandeep.rathore@weboniselab.com\",
+        \"userType\": 1,
+        \"assignmentType\": 1,
+        \"dateOfAssignment\": 1476075116870
+      }
+    },
+    {
+\"assetId\":21,
+      \"deviceType\": 6,
+      \"deviceName\": \"Keyboard\",
+      \"tag\": \"WL809\",
+      \"brand\": \"Logitech\",
+      \"serialNumber\": \"H8757JFJHVB865HJH7799\",
+      \"owner\": 1,
+      \"ownerName\": \"Webonise\",
+      \"status\": 1,
+      \"notes\": \"General multiline notes\",
+      \"additionalInfo\": {
+        \"wired\": true
+      },
+        \"assignmentDetails\": {
+        \"emailId\": \"sonali.sulgadle@weboniselab.com\",
+        \"userType\": 1,
+        \"assignmentType\": 1,
+        \"dateOfAssignment\": 1476075116870
+      }
+    },
+    {
+\"assetId\":22,
+      \"deviceType\": 8,
+      \"deviceName\": \"Monitor\",
+      \"tag\": \"WL752\",
+      \"brand\": \"Dell\",
+      \"serialNumber\": \"765VJJHGU768GHIYG76859\",
+      \"owner\": 1,
+      \"ownerName\": \"Webonise\",
+      \"status\": 0,
+      \"notes\": \"General multiline notes\",
+      \"additionalInfo\": null
+    },
+    {
+\"assetId\":23,
+      \"deviceType\": 11,
+      \"deviceName\": \"Dongle\",
+      \"tag\": \"WL734\",
+      \"brand\": \"Micromax\",
+      \"serialNumber\": \"AIOEUVCMSH7867BVVJHJAS\",
+      \"owner\": 1,
+      \"ownerName\": \"Webonise\",
+      \"status\": 0,
+      \"notes\": \"General multiline notes\",
+      \"additionalInfo\": {
+        \"simBrand\": \"Vodafone\",
+        \"simNumber\": \"123423782736923\"
+      }
+    },
+    {
+\"assetId\":24,
+      \"deviceType\": 11,
+      \"deviceName\": \"Dongle\",
+      \"tag\": \"WL735\",
+      \"brand\": \"Micromax\",
+      \"serialNumber\": \"AIOEUVCMSH7867BVVJHJAS\",
+      \"owner\": 1,
+      \"ownerName\": \"Webonise\",
+      \"status\": 0,
+      \"notes\": \"General multiline notes\",
+      \"additionalInfo\": {
+        \"simBrand\": \"Vodafone\",
+        \"simNumber\": \"123423782736923\"
+      }
+    },
+    {
+\"assetId\":25,
+      \"deviceType\": 11,
+      \"deviceName\": \"Dongle\",
+      \"tag\": \"WL744\",
+      \"brand\": \"Reliance\",
+      \"serialNumber\": \"AIOEUVCMSH7867BVVJHJAS\",
+      \"owner\": 1,
+      \"ownerName\": \"Webonise\",
+      \"status\": 1,
+      \"notes\": \"General multiline notes\",
+      \"additionalInfo\": {
+        \"simBrand\": \"Vodafone\",
+        \"simNumber\": \"123423782736923\"
+      },
+        \"assignmentDetails\": {
+        \"emailId\": \"sandeep.rathore@weboniselab.com\",
+        \"userType\": 1,
+        \"assignmentType\": 1,
+        \"dateOfAssignment\": 1476075116870
+      }
+    },
+    {
+\"assetId\":26,
+      \"deviceType\": 11,
+      \"deviceName\": \"Dongle\",
+      \"tag\": \"WL732\",
+      \"brand\": \"Micromax\",
+      \"serialNumber\": \"AIOEUVCMSH7867BVVJHJAS\",
+      \"owner\": 1,
+      \"ownerName\": \"Webonise\",
+      \"status\": 0,
+      \"notes\": \"General multiline notes\",
+      \"additionalInfo\": {
+        \"simBrand\": \"Vodafone\",
+        \"simNumber\": \"123423782736923\"
+      }
+    },
+    {
+\"assetId\":27,
+      \"deviceType\": 11,
+      \"deviceName\": \"Dongle\",
+      \"tag\": \"WL739\",
+      \"brand\": \"Micromax\",
+      \"serialNumber\": \"AIOEUVCMSH7867BVVJHJAS\",
+      \"owner\": 1,
+      \"ownerName\": \"Webonise\",
+      \"status\": 1,
+      \"notes\": \"General multiline notes\",
+      \"additionalInfo\": {
+        \"simBrand\": \"Vodafone\",
+        \"simNumber\": \"123423782736923\"
+      },
+        \"assignmentDetails\": {
+        \"emailId\": \"sandeep.rathore@weboniselab.com\",
+        \"userType\": 1,
+        \"assignmentType\": 0,
+        \"dateOfAssignment\": 1476075116870
+      }
+    },
+    {
+\"assetId\":28,
+      \"deviceType\": 11,
+      \"deviceName\": \"Dongle\",
+      \"tag\": \"WL733\",
+      \"brand\": \"Micromax\",
+      \"serialNumber\": \"AIOEUVCMSH7867BVVJHJAS\",
+      \"owner\": 1,
+      \"ownerName\": \"Webonise\",
+      \"status\": 0,
+      \"notes\": \"General multiline notes\",
+      \"additionalInfo\": {
+        \"simBrand\": \"Vodafone\",
+        \"simNumber\": \"123423782736923\"
+      }
+    },
+    {
+\"assetId\":29,
+      \"deviceType\": 11,
+      \"deviceName\": \"Dongle\",
+      \"tag\": \"WL737\",
+      \"brand\": \"Micromax\",
+      \"serialNumber\": \"AIOEUVCMSH7867BVVJHJAS\",
+      \"owner\": 1,
+      \"ownerName\": \"Webonise\",
+      \"status\": 0,
+      \"notes\": \"General multiline notes\",
+      \"additionalInfo\": {
+        \"simBrand\": \"Vodafone\",
+        \"simNumber\": \"123423782736923\"
+      }
+    },
+    {
+\"assetId\":30,
+      \"deviceType\": 11,
+      \"deviceName\": \"Dongle\",
+      \"tag\": \"WL767\",
+      \"brand\": \"Micromax\",
+      \"serialNumber\": \"AIOEUVCMSH7867BVVJHJAS\",
+      \"owner\": 1,
+      \"ownerName\": \"Webonise\",
+      \"status\": 0,
+      \"notes\": \"General multiline notes\",
+      \"additionalInfo\": {
+        \"simBrand\": \"Vodafone\",
+        \"simNumber\": \"123423782736923\"
+      }
+    }
+  ]
+}</string>
+</resources>

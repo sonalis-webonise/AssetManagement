@@ -1,11 +1,20 @@
 package com.example.webonise.assetmanager.Model;
 
-/**
- * Created by webonise on 13/10/16.
- */
-
-public class DesktopSpecificDetails extends CommonAssetDetails {
+public class DesktopSpecificDetails extends CommonAssetDetailModel {
     private String processor;
+    private String ramTotalSize;
+    private String ramSize;
+    private String ramCount;
+    private String hdd;
+    private String macWifi;
+    private String macLan;
+    private String operatingSystem;
+    private String activationKey;
+    private String osVersion;
+
+    public DesktopSpecificDetails() {
+        super();
+    }
 
     public String getRamTotalSize() {
         return ramTotalSize;
@@ -77,19 +86,5 @@ public class DesktopSpecificDetails extends CommonAssetDetails {
 
     public void setOsVersion(String osVersion) {
         this.osVersion = osVersion;
-    }
-
-    private String ramTotalSize;
-    private String ramSize;
-    private String ramCount;
-    private String hdd;
-    private String macWifi;
-    private String macLan;
-    private String operatingSystem;
-    private String activationKey;
-    private String osVersion;
-
-    public DesktopSpecificDetails() {
-        super();
     }
 }

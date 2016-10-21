@@ -1,10 +1,6 @@
 package com.example.webonise.assetmanager.Model;
 
 /**
- * Created by webonise on 5/10/16.
- */
-
-/**
  * DeviceTypeListData contains the data for displaying in ListView
  */
 public class DeviceTypeListData {

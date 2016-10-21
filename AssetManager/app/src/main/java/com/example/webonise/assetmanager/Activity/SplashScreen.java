@@ -1,15 +1,21 @@
 package com.example.webonise.assetmanager.Activity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.webonise.assetmanager.Model.LoginToken;
 import com.example.webonise.assetmanager.R;
+
+import org.json.JSONObject;
 
 public class SplashScreen extends AppCompatActivity {
 
     private static final int SPLASH_TIME_OUT = 3000;
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

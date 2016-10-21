@@ -1,17 +1,13 @@
 package com.example.webonise.assetmanager.Model;
 
-/**
- * Created by webonise on 14/10/16.
- */
-
-public class Filter {
+public class FilterModel {
     private boolean isSelected;
     private String name;
 
-    public Filter() {
+    public FilterModel() {
     }
 
-    public Filter(String name) {
+    public FilterModel(String name) {
         this.name = name;
     }
 

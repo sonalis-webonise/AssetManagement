@@ -1,10 +1,6 @@
 package com.example.webonise.assetmanager.Model;
 
-/**
- * Created by webonise on 13/10/16.
- */
-
-public class AssetAssignmentDetails {
+public class AssetAssignmentDetailModel {
     private String emailId;
     private String company;
     private String userType;
@@ -60,7 +56,7 @@ public class AssetAssignmentDetails {
         this.emailId = emailId;
     }
 
-    public AssetAssignmentDetails() {
+    public AssetAssignmentDetailModel() {
         super();
     }
 }

@@ -1,10 +1,6 @@
 package com.example.webonise.assetmanager.Model;
 
-/**
- * Created by webonise on 13/10/16.
- */
-
-public class DongleSpecificDetails extends CommonAssetDetails {
+public class DongleSpecificDetails extends CommonAssetDetailModel {
     private String simBrand;
 
     public String getSimBrand() {

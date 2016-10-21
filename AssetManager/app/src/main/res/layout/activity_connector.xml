@@ -32,7 +32,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/editbrand"
+                android:id="@+id/editBrand"
                 style="@style/inputFont"
                 android:hint="@string/hint_brand" />
         </android.support.design.widget.TextInputLayout>

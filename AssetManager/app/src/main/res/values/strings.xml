@@ -31,6 +31,7 @@
 
     <!--Buttons on Device Forms-->
     <string name="btn_saveDevice">Save Device</string>
+    <string name="btn_setDate">Set Date</string>
     <string name="btn_assign">Assign</string>
 
     <!--Common fields in forms-->
@@ -69,6 +70,18 @@
     <string name="new_password">New Password</string>
     <string name="confirm_password">Confirm New Password</string>
     <string name="button_change">Save New Password</string>
+
+    <!--Desktop Validation-->
+    <string name="error_tag">Enter Asset Tag</string>
+    <string name="error_brand">Enter Asset Brand</string>
+    <string name="error_serial">Enter Asset Serial Number</string>
+    <string name="error_owner">Enter Asset Owner</string>
+
+    <!--Assign Validation-->
+    <string name="error_assignEmail">Enter Email ID</string>
+    <string name="error_assignCompany">Enter Company Name</string>
+
+    <string name="error_validAssignEmail">Enter Valid Email ID</string>
 
     <string-array name="type_array">
         <item>Wired</item>

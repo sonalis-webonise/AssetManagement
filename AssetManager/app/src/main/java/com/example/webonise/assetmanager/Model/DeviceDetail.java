@@ -1,12 +1,33 @@
 package com.example.webonise.assetmanager.Model;
 
-/**
- * Created by webonise on 6/10/16.
- */
+import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
-public class DeviceDetail {
+public class DeviceDetail extends RealmObject {
 
-    private String brand, tag, emailId, date, status;
+    @PrimaryKey
+    String assetId;
+    private String brand;
+    private String tag;
+    private int status;
+    private String statusValue;
+    private AssignmentDetail assignmentDetails;
+
+    public AssignmentDetail getAssignmentDetails() {
+        return assignmentDetails;
+    }
+
+    public void setAssignmentDetails(AssignmentDetail assignmentDetails) {
+        this.assignmentDetails = assignmentDetails;
+    }
+
+    public String getAssetId() {
+        return assetId;
+    }
+
+    public void setAssetId(String assetId) {
+        this.assetId = assetId;
+    }
 
     public String getBrand() {
         return brand;
@@ -24,27 +45,19 @@ public class DeviceDetail {
         this.tag = tag;
     }
 
-    public String getEmailId() {
-        return emailId;
+    public void setStatus(int status) {
+        this.status = status;
     }
 
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public String getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setStatusValue(String statusValue) {
+        this.statusValue = statusValue;
+    }
+
+    public String getStatusValue() {
+        return statusValue;
     }
 }

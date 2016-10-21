@@ -8,7 +8,6 @@
     <CheckBox
         android:id="@+id/checkBox"
         style="@style/codeFontBrand"
-        android:onClick="onCheckboxClick"
         android:background="@color/bgstartColor" />
 
 </RelativeLayout>

@@ -5,10 +5,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.example.webonise.assetmanager.Model.Category;
+import com.example.webonise.assetmanager.Model.CategoryModel;
 import com.example.webonise.assetmanager.R;
 
 import java.util.List;
@@ -19,9 +18,9 @@ import java.util.List;
 
 public class FilterCategoryAdapter extends RecyclerView.Adapter<FilterCategoryAdapter.MyViewHolder> {
 
-    private List<Category> filterCategoryList;
+    private List<CategoryModel> filterCategoryList;
 
-    public FilterCategoryAdapter(List<Category> filterCategoryList, Context context) {
+    public FilterCategoryAdapter(List<CategoryModel> filterCategoryList, Context context) {
         this.filterCategoryList = filterCategoryList;
     }
 

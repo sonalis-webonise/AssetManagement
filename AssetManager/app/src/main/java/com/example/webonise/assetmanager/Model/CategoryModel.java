@@ -2,19 +2,15 @@ package com.example.webonise.assetmanager.Model;
 
 import java.util.List;
 
-/**
- * Created by webonise on 14/10/16.
- */
-
-public class Category{
-    private List<Filter> filters;
+public class CategoryModel {
+    private List<FilterModel> filters;
     private String categoryName;
 
-    public Category(String name) {
+    public CategoryModel(String name) {
         this.categoryName=name;
     }
 
-    public Category() {
+    public CategoryModel() {
 
     }
 
@@ -26,11 +22,11 @@ public class Category{
         this.categoryName = categoryName;
     }
 
-    public List<Filter> getFilters() {
+    public List<FilterModel> getFilters() {
         return filters;
     }
 
-    public void setFilters(List<Filter> filters) {
+    public void setFilters(List<FilterModel> filters) {
         this.filters = filters;
     }
 }
